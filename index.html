@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- INSTRUCCIÓN: Cambia 'en' por 'es' para indicar que el idioma de la página es español -->
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- INSTRUCCIÓN: Aquí se cargan las fuentes (tipografías) de la página. Puedes cambiarlas buscando nuevas fuentes en Google Fonts. -->
+  <link href="http://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">  
+  
+  <!-- INSTRUCCIÓN: Este es el título que aparecerá en la pestaña del navegador. Cámbialo por el nombre de tu página o proyecto. -->
+  <title>Congreso Estudiantil Sancarleño</title>
+  
+  <!-- INSTRUCCIÓN: Este enlace conecta tu HTML con tu archivo de estilos CSS. Asegúrate de tener el archivo "styles.css" en tu carpeta. -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- INSTRUCCIÓN: Este script carga los íconos de FontAwesome (para redes sociales, etc.). -->
+  <script src="https://kit.fontawesome.com/a36c13d2c3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main class="main-container">    
+    <section class="homepage-section" id="homepage-section">
+      
+      <!-- INSTRUCCIÓN: Menú superior pequeño (Top Nav) -->
+      <nav class="top-nav">
+        <ul>
+          <!-- INSTRUCCIÓN: Reemplaza el '#' en href="#" por la URL (link) de tu Facebook o Twitter -->
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>  
+          
+          <!-- INSTRUCCIÓN: Cambia estos textos por las opciones que necesites, por ejemplo: "Contacto", "Login", etc. -->
+          <li><a href="#"> Español </a></li>
+          <li><a href="#"> Mi Página </a></li>
+          <li><a href="#"> Cerrar Sesión </a></li>
+        </ul>
+      </nav>
+  
+      <!-- INSTRUCCIÓN: Menú de navegación principal (Web Nav) -->
+      <nav class="web-nav">
+        <!-- INSTRUCCIÓN: Cambia el enlace 'href' hacia dónde quieres que lleve tu logo al hacerle clic. -->
+        <a href="index.html" class="logo-img">
+          <!-- INSTRUCCIÓN: Cambia el 'src' por la ruta donde esté guardado tu logotipo. Cambia el 'alt' por el nombre de tu marca. -->
+          <img src="./images/Bicentenario.png" alt="Logo de mi página" />
+        </a>
+  
+        <!-- INSTRUCCIÓN: Modifica los nombres del menú y los enlaces de 'href' para que dirijan a tus otras páginas (ej. servicios.html, contacto.html). -->
+        <ul>
+            <a href="./index.html"> Inicio</a>
+            <a href="./about.html"> Acerca de</a>
+            <a href="./index.html#program"> Programa </a>
+            <a href="./certificados.html"> Certificados </a>
+            <a href="./patrocinadores.html"> Patrocinadores </a>
+            <a href="./noticias.html"> Noticias </a>
+        </ul>
+      </nav>
+
+      <!-- INSTRUCCIÓN: Sección principal de bienvenida (Hero section) -->
+      <div class="homepage">
+        
+        <!-- INSTRUCCIÓN: Ícono de menú de hamburguesa para la versión móvil. Cambia la ruta del src si usas otro ícono. -->
+        <a class="menu-icon menu-icon-index" href="#mobile-menu" onclick="MobileMenu()">
+          <img src="./images/icons/hamburger-icon.png" alt="Menú">
+        </a>
+        
+        <!-- Menú Móvil que solo aparece al presionar el ícono de hamburguesa -->                
+        <div id="MobileMenu"> 
+          <a class="close-menu" onclick="MobileMenu()">
+            <img src="./images/icons/close-x.svg" alt="cerrar menú">
+          </a>                          
+          <!-- INSTRUCCIÓN: Al igual que en el menú normal, cambia los textos y enlaces aquí para la versión de celulares -->
+          <li><a href="index.html"> Inicio </a></li>
+          <li><a href="about.html"> Acerca de </a></li>
+          <li><a href="index.html#program"> Programa </a></li>
+          <li><a href="certificados.html"> Certificados </a></li>
+          <li><a href="patrocinadores.html"> Patrocinadores </a></li>
+          <li><a href="noticias.html"> Noticias </a></li>
+        </div> 
+        
+        <!-- INSTRUCCIÓN: Modifica este <h1> con el título más importante de tu página. La etiqueta <br> sirve para hacer un salto de línea. -->
+        <h1>3º CONGRESO ESTUDIANTIL<br>SANCARLEÑO</h1>          
+        
+        <!-- INSTRUCCIÓN: Escribe aquí la descripción o introducción principal de tu página o proyecto. -->
+        <p>
+          Raíces que inspiran, futuro que transformamos
+        </p>
+        
+        <!-- INSTRUCCIÓN: Cambia la fecha y el lugar según tu evento o información. Si no lo necesitas, puedes borrar las etiquetas <h3> y <h4> -->
+        <h3>08.10.2026</h3>
+        <h4>San Carlos, Salta, Argentina</h4>        
+      </div>
+
+      <div class="program-zone">
+        
+        <!-- INSTRUCCIÓN: Título de la sección de contenido. Cámbialo por "Servicios", "Productos", etc. -->
+        <h2 id="program-title">Programa Principal</h2>
+        <div class="line"></div>
+
+        <!-- --Programa-- -->
+        <div id="program">
+          
+          <!-- INSTRUCCIÓN: Bloque individual (Tarjeta). Puedes duplicar este 'div class="lecture"' para añadir más, o borrar si necesitas menos. -->
+          <div class="lecture">
+            <!-- INSTRUCCIÓN: Cambia el 'src' por la imagen o ícono que represente este servicio/charla. -->
+            <img src="./images/icons/program_icon_01.png" alt="Ponencia 1">
+            <!-- INSTRUCCIÓN: Título de esta tarjeta -->
+            <h3>Adrea Yaccuzo</h3> 
+            <!-- INSTRUCCIÓN: Descripción breve de la tarjeta -->
+            <p>Coaching Motivacional</p>
+          </div>
+          
+          <div class="lecture">
+            <img src="./images/icons/program_icon_01.png" alt="Ponencia 2">
+            <h3>H.Monica Flores</h3> 
+            <p>El sentido del ser</p>
+          </div>
+          
+          <div class="lecture">
+            <img src="./images/icons/program_icon_01.png" alt="Ponencia 3">
+            <h3>Lic. Juan Eudes</h3> 
+            <p>La carrera del Enologo y ¿Por que tomar las riendas de tu vida?</p>
+          </div>
+          
+          <div class="lecture">
+            <img src="./images/icons/program_icon_01.png" alt="Ponencia 4">
+            <h3>Psicopedagogas</h3>
+            <p>Mercedes Rodriguez y Cintia Arancibia, Test de Orientacion Vocacional</p>
+          </div>
+          
+          <div class="lecture">
+            <img src="./images/icons/program_icon_01.png" alt="Ponencia 5">
+            <h3>Cristina Menacho</h3> 
+            <p>Charla sobre ¿Que hacer despues del secundario?</p>
+          </div>
+        </div>
+        <!-- fin del programa -->
+
+        <!-- INSTRUCCIÓN: Texto para ver más información. -->
+        <h4 id="program-see"><u>VER EL PROGRAMA COMPLETO</u></h4>
+      
+        <!-- INSTRUCCIÓN: Este es un botón de acción (Call to Action). Cambia el texto y el 'href' para que lleve a tu formulario o página de ventas. -->
+        <div class="rectangle">
+          <a href="javascript: void(0)">Únete a la Conferencia</a>
+        </div>
+
+      </div>
+            
+      <section class="speakers">
+        <!-- INSTRUCCIÓN: Cambia el título de esta sección, por ejemplo a "Nuestro Equipo", "Testimonios", etc. -->
+        <h2>Panelistas</h2>
+        <div class="line"></div>
+        
+        <!-- INSTRUCCIÓN: Aquí parece que tu archivo "code.js" inyecta contenido dinámico para las reseñas o ponentes. -->
+        <div id="reviews" class="reviews">
+        </div>
+      </section>
+
+      <!-- PATROCINADORES + LOGO -->
+      <footer id="about-footer-main-i">
+
+        <div class="about-footer-i">
+          <div class="sponsors-i">
+            
+            <!-- INSTRUCCIÓN: Título de patrocinadores. Puedes cambiarlo a "Marcas que confían en nosotros" o "Colaboradores". -->
+            <h2 id="sponsors-h2-i">Patrocinadores</h2>
+            <div class="line line2"></div>
+
+            <div class="sponsors-image-i">
+              <!-- INSTRUCCIÓN: Cambia los 'src' por los logos de tus clientes, marcas asociadas o auspiciadores. -->
+              <img id="bicent-logo" src="./images/bicent.png" alt="Logo del Bicentenario"> 
+              <img id="inc-logo" src="./images/INC.png" alt="Logo del Instituto Nacional de Cultura">
+              <img id="min-logo" src="./images/mincult.png" alt="Logo del Ministerio de Cultura">           
+              <img id="bnp-logo" src="./images/BNP.png" alt="Logo de la Biblioteca Nacional">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="foot-bottom-M-i">
+          <div class="foot-logo-ic">
+              <!-- INSTRUCCIÓN: Logo principal para el pie de página (footer). -->
+              <img class="foot-logo-i" src="./images/Bicentenario.png" alt="icono pie de página">
+          </div>
+          <div class="foot-txt-i">
+              <!-- INSTRUCCIÓN: Información de contacto, dirección y derechos de autor de tu empresa. -->
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+          </div>
+        </div>
+
+      </footer>
+    </section>
+  </main>
+  
+  <!-- INSTRUCCIÓN: Este script conecta tu HTML con tu archivo de Javascript. Asegúrate de tener "code.js". -->
+  <script src="code.js"></script>
+
+</body>
+</html>

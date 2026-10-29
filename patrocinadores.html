@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Congreso Estudiantil Sancarleño - Patrocinadores</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a36c13d2c3.js" crossorigin="anonymous"></script>
+
+  <!-- Estilos solo de esta página. Usan las variables de tu styles.css (--blue, --black, --gray, --orange). -->
+  <style>
+    #spons-section {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px 40px;
+    }
+
+    #spons-section h2 {
+      color: var(--blue);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      padding: 0 0 6px 0;
+    }
+
+    #spons-section p {
+      background: none;
+      color: var(--black);
+      font-size: 13px;
+      line-height: 22px;
+      text-align: center;
+      padding: 0;
+      margin: 0 0 14px 0;
+      max-width: 520px;
+    }
+
+    /* Panel oscuro con los logos (mismo fondo que el bloque de patrocinadores del sitio) */
+    #spons-section .spons-grid {
+      width: 100%;
+      max-width: 760px;
+      margin: 18px 0 36px;
+      padding: 28px 20px;
+      background-color: #2f3135;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 20px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    #spons-section .spons-grid img {
+      width: 100%;
+      max-width: 150px;
+      max-height: 80px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    #spons-section .spons-join {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
+
+    #spons-section .spons-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    #spons-section .spons-btn {
+      display: block;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      color: white;
+      background-color: var(--blue);
+    }
+    #spons-section .spons-btn:hover { background-color: var(--black); }
+    #spons-section .spons-btn.wa { background-color: #25d366; color: #0b2e17; }
+    #spons-section .spons-btn.wa:hover { background-color: #1fb457; }
+
+    @media only screen and (min-width: 768px) {
+      #spons-section .spons-grid { grid-template-columns: repeat(4, 1fr); padding: 36px 28px; }
+      #spons-section .spons-actions { flex-direction: row; }
+      #spons-section .spons-btn { flex: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main-container">
+    <section class="about-section" id="about-section">
+
+      <nav class="top-nav">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"> Español </a></li>
+          <li><a href="#"> Mi Página </a></li>
+          <li><a href="#"> Cerrar Sesión </a></li>
+        </ul>
+      </nav>
+
+      <nav class="web-nav">
+        <a href="index.html" class="logo-img">
+          <img src="./images/Bicentenario.png" alt="Logo" />
+        </a>
+
+        <ul>
+          <li><a href="index.html"> Inicio </a></li>
+          <li><a href="about.html"> Acerca de </a></li>
+          <li><a href="index.html#program"> Programa </a></li>
+          <li><a href="certificados.html"> Certificados </a></li>
+          <li><a href="patrocinadores.html"> Patrocinadores </a></li>
+          <li><a href="noticias.html"> Noticias </a></li>
+        </ul>
+      </nav>
+
+      <div class="about">
+
+        <!-- Portada: mismo bloque que about.html -->
+        <div class="about-first">
+          <a class="menu-icon" href="#mobile-menu" onclick="MobileMenu()">
+            <img src="./images/icons/hamburger-icon.png" alt="Menu">
+          </a>
+          <!-- Menú móvil: aparece al presionar el ícono de hamburguesa -->
+          <div id="MobileMenu">
+            <a class="close-menu" onclick="MobileMenu()">
+              <img src="./images/icons/close-x.svg" alt="close menu">
+            </a>
+          <li><a href="index.html"> Inicio </a></li>
+          <li><a href="about.html"> Acerca de </a></li>
+          <li><a href="index.html#program"> Programa </a></li>
+          <li><a href="certificados.html"> Certificados </a></li>
+          <li><a href="patrocinadores.html"> Patrocinadores </a></li>
+          <li><a href="noticias.html"> Noticias </a></li>
+          </div>
+
+          <div>
+            <h1 class="about-h1">San Carlos - 2026</h1>
+            <h2 class="about-h2">PATROCINADORES</h2>
+          </div>
+
+          <p id="about-p">
+            Gracias a las instituciones y organizaciones que hacen posible el
+            Congreso Estudiantil Sancarleño.
+          </p>
+        </div>
+
+        <!-- Logos y contacto -->
+        <section id="spons-section">
+          <h2>Quienes nos acompañan</h2>
+          <div class="line"></div>
+
+          <div class="spons-grid">
+            <!-- Para agregar un patrocinador, copia una línea <img> y cambia el src y el alt -->
+            <img src="./images/bicent.png" alt="Logo del Bicentenario">
+            <img src="./images/INC.png" alt="Logo del Instituto Nacional de Cultura">
+            <img src="./images/mincult.png" alt="Logo del Ministerio de Cultura">
+            <img src="./images/BNP.png" alt="Logo de la Biblioteca Nacional">
+          </div>
+
+          <div class="spons-join">
+            <h2>¿Quieres ser patrocinador?</h2>
+            <div class="line"></div>
+            <p>
+              Si tu institución, comercio o empresa quiere apoyar a los estudiantes del
+              Valle Calchaquí, escríbenos y te contamos cómo sumarte.
+            </p>
+            <div class="spons-actions">
+              <a class="spons-btn" href="mailto:dierik.emmanuel@gmail.com?subject=Quiero%20ser%20patrocinador%20del%20Congreso%20Estudiantil">Escribir por correo</a>
+              <a class="spons-btn wa" target="_blank" rel="noopener"
+                 href="https://wa.me/5493875912597?text=Hola%2C%20quiero%20ser%20patrocinador%20del%20Congreso%20Estudiantil.">Escribir por WhatsApp</a>
+            </div>
+          </div>
+        </section>
+
+        <footer id="about-footer-main">
+          <div class="foot-bottom-M">
+            <div class="foot-logo">
+              <img class="foot-logo" src="./images/Bicentenario.png" alt="cc-icon">
+            </div>
+            <div class="foot-txt">
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+            </div>
+          </div>
+
+          <div class="foot-bottom-M-i">
+          <div class="foot-logo-ic">
+              <!-- INSTRUCCIÓN: Logo principal para el pie de página (footer). -->
+              <img class="foot-logo-i" src="./images/Bicentenario.png" alt="icono pie de página">
+          </div>
+          <div class="foot-txt-i">
+              <!-- INSTRUCCIÓN: Información de contacto, dirección y derechos de autor de tu empresa. -->
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+          </div>
+        </div>
+
+      </footer>
+    </section>
+  </main>
+
+  <script src="code.js"></script>
+</body>
+</html>

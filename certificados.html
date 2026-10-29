@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Congreso Estudiantil Sancarleño - Certificados</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a36c13d2c3.js" crossorigin="anonymous"></script>
+
+  <!-- Estilos solo de esta página. Usan las variables de tu styles.css (--blue, --black, --gray, --orange). -->
+  <style>
+    #cert-section {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px 40px;
+    }
+
+    #cert-section .cert-card {
+      width: 100%;
+      max-width: 480px;
+      background-color: #f6f6f6;
+      border: 1px solid var(--gray);
+      padding: 22px;
+    }
+
+    #cert-section label {
+      display: block;
+      color: var(--black);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    #cert-dni {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px; /* 16px evita el zoom automático en iPhone */
+      color: var(--black);
+      background-color: white;
+      border: 1px solid var(--gray);
+      margin-bottom: 12px;
+    }
+
+    #cert-dni:focus {
+      outline: 2px solid var(--blue);
+      border-color: transparent;
+    }
+
+    #cert-section .cert-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      background-color: var(--blue);
+      border: 0;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #cert-section .cert-btn:hover { background-color: var(--black); }
+    #cert-section .cert-btn:disabled { opacity: .6; cursor: wait; }
+
+    #cert-section .cert-btn.wa {
+      background-color: #25d366;
+      color: #0b2e17;
+      margin-top: 12px;
+    }
+
+    #cert-msg {
+      margin-top: 14px;
+      font-size: 13px;
+      line-height: 20px;
+      color: var(--black);
+    }
+    #cert-msg.err { color: #c62828; }
+
+    #cert-section .cert-info {
+      width: 100%;
+      max-width: 480px;
+      margin-top: 32px;
+    }
+
+    #cert-section .cert-info h2 {
+      color: var(--black);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      text-align: left;
+      padding: 0 0 8px 0;
+      width: 100%;
+    }
+
+    #cert-section .cert-info ol {
+      margin: 0 0 14px 0;
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 22px;
+      color: var(--black);
+    }
+
+    #cert-section .cert-info p {
+      background: none;
+      text-align: left;
+      padding: 0;
+      margin: 0 0 12px 0;
+      font-size: 13px;
+      line-height: 22px;
+      color: var(--black);
+    }
+  </style>
+</head>
+
+<body>
+  <main id="main-container">
+    <section class="about-section" id="about-section">
+
+      <nav class="top-nav">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"> Español </a></li>
+          <li><a href="#"> Mi Página </a></li>
+          <li><a href="#"> Cerrar Sesión </a></li>
+        </ul>
+      </nav>
+
+      <nav class="web-nav">
+        <a href="index.html" class="logo-img">
+          <img src="./images/Bicentenario.png" alt="Logo" />
+        </a>
+
+        <ul>
+            <a href="./index.html"> Inicio</a>
+            <a href="./about.html"> Acerca de</a>
+            <a href="./index.html#program"> Programa </a>
+            <a href="./certificados.html"> Certificados </a>
+            <a href="./patrocinadores.html"> Patrocinadores </a>
+            <a href="./noticias.html"> Noticias </a>
+        </ul>
+      </nav>
+
+      <div class="about">
+
+        <!-- Portada: mismo bloque que about.html -->
+        <div class="about-first">
+          <a class="menu-icon" href="#mobile-menu" onclick="MobileMenu()">
+            <img src="./images/icons/hamburger-icon.png" alt="Menu">
+          </a>
+          <!-- Menú móvil: aparece al presionar el ícono de hamburguesa -->
+          <div id="MobileMenu">
+            <a class="close-menu" onclick="MobileMenu()">
+              <img src="./images/icons/close-x.svg" alt="close menu">
+            </a>
+          <li><a href="index.html"> Inicio </a></li>
+          <li><a href="about.html"> Acerca de </a></li>
+          <li><a href="index.html#program"> Programa </a></li>
+          <li><a href="certificados.html"> Certificados </a></li>
+          <li><a href="patrocinadores.html"> Patrocinadores </a></li>
+          <li><a href="noticias.html"> Noticias </a></li>
+          </div>
+
+          <div>
+            <h1 class="about-h1">San Carlos - 2026</h1>
+            <h2 class="about-h2">CERTIFICADOS</h2>
+          </div>
+
+          <p id="about-p">
+            Ingresa tu número de DNI para buscar y descargar tu certificado de participación
+            del Congreso Estudiantil Sancarleño.
+          </p>
+        </div>
+
+        <!-- Buscador de certificados -->
+        <section id="cert-section">
+          <div class="cert-card">
+            <label for="cert-dni">Número de DNI</label>
+            <input id="cert-dni" type="text" inputmode="numeric" placeholder="Ej: 30.123.456" autocomplete="off">
+            <button id="cert-btn" class="cert-btn" type="button">Buscar y descargar</button>
+            <div id="cert-msg" aria-live="polite"></div>
+          </div>
+
+          <div class="cert-info">
+            <h2>¿Cómo funciona?</h2>
+            <ol>
+              <li>Escribe tu DNI, con o sin puntos. El sistema lo limpia automáticamente.</li>
+              <li>Presiona <b>Buscar y descargar</b>.</li>
+              <li>Si tu certificado está disponible, se descargará en formato PDF.</li>
+            </ol>
+            <p>
+              <b>¿No aparece tu certificado?</b> Puede que tus datos estuvieran incompletos en la lista de
+              asistencia. En ese caso se mostrará un botón para solicitarlo por WhatsApp
+              y lo gestionaremos a la brevedad.
+            </p>
+            <p>
+              Para cualquier otra consulta escribe a <b>dierik.emmanuel@gmail.com</b>.
+            </p>
+          </div>
+      </section>
+
+        <footer id="about-footer-main">
+          <div class="foot-bottom-M">
+            <div class="foot-logo">
+              <img class="foot-logo" src="./images/Bicentenario.png" alt="cc-icon">
+            </div>
+            <div class="foot-txt">
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+            </div>
+          </div>
+
+           <div class="foot-bottom-M-i">
+          <div class="foot-logo-ic">
+              <!-- INSTRUCCIÓN: Logo principal para el pie de página (footer). -->
+              <img class="foot-logo-i" src="./images/Bicentenario.png" alt="icono pie de página">
+          </div>
+          <div class="foot-txt-i">
+              <!-- INSTRUCCIÓN: Información de contacto, dirección y derechos de autor de tu empresa. -->
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+          </div>
+        </div>
+
+      </footer>
+    </section>
+  </main>
+
+  <script src="code.js"></script>
+
+  <script>
+    // === CONFIGURACIÓN ===
+    const API_URL = "https://script.google.com/macros/s/AKfycbwbX0juHhBBpzINgkBLpHY_dWcDgXRg9vxgcXjMnW7tRXqHT2ZDck_jo_ZcLjv3Txyr/exec"; // URL de la aplicación web de Apps Script (termina en /exec)
+    const WHATSAPP = "5493875912597";          // +54 9 387 5912597
+
+    const $dni = document.getElementById("cert-dni");
+    const $btn = document.getElementById("cert-btn");
+    const $msg = document.getElementById("cert-msg");
+
+    $btn.addEventListener("click", buscar);
+    $dni.addEventListener("keydown", function (e) { if (e.key === "Enter") buscar(); });
+
+    function mostrar(html, esError) {
+      $msg.className = esError ? "err" : "";
+      $msg.innerHTML = html;
+    }
+
+    function botonWhatsApp(dni) {
+      var texto = encodeURIComponent(
+        "Hola, no encontré mi certificado del Congreso Estudiantil. Mi DNI es " + dni + ". ¿Podrían ayudarme?"
+      );
+      return '<a class="cert-btn wa" target="_blank" rel="noopener" href="https://wa.me/' +
+             WHATSAPP + '?text=' + texto + '">Solicitar por WhatsApp</a>';
+    }
+
+    function base64ToBlob(b64) {
+      var bin = atob(b64);
+      var bytes = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      return new Blob([bytes], { type: "application/pdf" });
+    }
+
+    async function buscar() {
+      var dni = $dni.value.replace(/\D/g, ""); // deja solo números
+      if (dni.length < 7 || dni.length > 8) {
+        mostrar("Ingresa un DNI válido de 7 u 8 números.", true);
+        return;
+      }
+
+      $btn.disabled = true;
+      mostrar("Buscando tu certificado…", false);
+
+      try {
+        var resp = await fetch(API_URL + "?dni=" + encodeURIComponent(dni));
+        var data = await resp.json();
+
+        if (data.ok) {
+          var url = URL.createObjectURL(base64ToBlob(data.base64));
+          var a = document.createElement("a");
+          a.href = url;
+          a.download = data.nombre;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          mostrar('¡Listo! Si la descarga no comenzó, <a href="' + url + '" download="' +
+                  data.nombre + '">toca aquí</a>.', false);
+        } else if (data.error === "NO_ENCONTRADO") {
+          mostrar("No encontramos un certificado para el DNI " + dni + ".", true);
+          $msg.insertAdjacentHTML("beforeend", botonWhatsApp(dni));
+        } else if (data.error === "DNI_INVALIDO") {
+          mostrar("El DNI ingresado no es válido.", true);
+        } else {
+          mostrar("Hubo un problema en el servidor. Intenta de nuevo en unos minutos o solicítalo por WhatsApp.", true);
+          $msg.insertAdjacentHTML("beforeend", botonWhatsApp(dni));
+        }
+      } catch (err) {
+        mostrar("No se pudo conectar. Revisa tu conexión e inténtalo nuevamente.", true);
+      } finally {
+        $btn.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>

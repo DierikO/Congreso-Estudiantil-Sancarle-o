@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Congreso Estudiantil Sancarleño - Noticias</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a36c13d2c3.js" crossorigin="anonymous"></script>
+
+  <!-- Estilos solo de esta página. Usan las variables de tu styles.css (--blue, --black, --gray, --orange). -->
+  <style>
+    #news-section {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px 50px;
+    }
+
+    #news-section .maint-icon {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
+      color: var(--orange);
+    }
+
+    #news-section h2 {
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: center;
+      padding: 0 0 6px 0;
+    }
+
+    #news-section p {
+      background: none;
+      color: var(--black);
+      font-size: 13px;
+      line-height: 22px;
+      text-align: center;
+      padding: 0;
+      margin: 0 0 22px 0;
+      max-width: 460px;
+    }
+
+    #news-section .news-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    #news-section .news-btn {
+      display: block;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      color: white;
+      background-color: var(--blue);
+    }
+    #news-section .news-btn:hover { background-color: var(--black); }
+
+    #news-section .news-btn.alt {
+      background-color: white;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+    #news-section .news-btn.alt:hover { background-color: var(--blue); color: white; }
+  </style>
+</head>
+
+<body>
+  <main id="main-container">
+    <section class="about-section" id="about-section">
+
+      <nav class="top-nav">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"> Español </a></li>
+          <li><a href="#"> Mi Página </a></li>
+          <li><a href="#"> Cerrar Sesión </a></li>
+        </ul>
+      </nav>
+
+      <nav class="web-nav">
+        <a href="index.html" class="logo-img">
+          <img src="./images/Bicentenario.png" alt="Logo" />
+        </a>
+
+        <ul>
+            <a href="./index.html"> Inicio</a>
+            <a href="./about.html"> Acerca de</a>
+            <a href="./index.html#program"> Programa </a>
+            <a href="./certificados.html"> Certificados </a>
+            <a href="./patrocinadores.html"> Patrocinadores </a>
+            <a href="./noticias.html"> Noticias </a>
+        </ul>
+      </nav>
+
+      <div class="about">
+
+        <!-- Portada: mismo bloque que about.html -->
+        <div class="about-first">
+          <a class="menu-icon" href="#mobile-menu" onclick="MobileMenu()">
+            <img src="./images/icons/hamburger-icon.png" alt="Menu">
+          </a>
+          <!-- Menú móvil: aparece al presionar el ícono de hamburguesa -->
+          <div id="MobileMenu">
+            <a class="close-menu" onclick="MobileMenu()">
+              <img src="./images/icons/close-x.svg" alt="close menu">
+            </a>
+          <li><a href="index.html"> Inicio </a></li>
+          <li><a href="about.html"> Acerca de </a></li>
+          <li><a href="index.html#program"> Programa </a></li>
+          <li><a href="certificados.html"> Certificados </a></li>
+          <li><a href="patrocinadores.html"> Patrocinadores </a></li>
+          <li><a href="noticias.html"> Noticias </a></li>
+          </div>
+
+          <div>
+            <h1 class="about-h1">San Carlos - 2026</h1>
+            <h2 class="about-h2">NOTICIAS</h2>
+          </div>
+
+          <p id="about-p">
+            Las novedades y comunicados del Congreso Estudiantil Sancarleño.
+          </p>
+        </div>
+
+        <!-- Aviso de mantenimiento -->
+        <section id="news-section">
+          <!-- Ícono de herramienta (SVG propio, no depende de ninguna librería) -->
+          <svg class="maint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>
+          </svg>
+
+          <h2>Sección en mantenimiento</h2>
+          <div class="line"></div>
+          <p>
+            Estamos preparando esta sección para compartir las novedades del Congreso.
+            Muy pronto encontrarás aquí noticias, comunicados y fotos de las ediciones.
+          </p>
+
+          <div class="news-actions">
+            <a class="news-btn" href="index.html">Volver al inicio</a>
+            <a class="news-btn alt" href="certificados.html">Descargar mi certificado</a>
+          </div>
+        </section>
+
+        <footer id="about-footer-main">
+          <div class="foot-bottom-M">
+            <div class="foot-logo">
+              <img class="foot-logo" src="./images/Bicentenario.png" alt="cc-icon">
+            </div>
+            <div class="foot-txt">
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+            </div>
+          </div>
+
+          <div class="foot-bottom-M-i">
+          <div class="foot-logo-ic">
+              <!-- INSTRUCCIÓN: Logo principal para el pie de página (footer). -->
+              <img class="foot-logo-i" src="./images/Bicentenario.png" alt="icono pie de página">
+          </div>
+          <div class="foot-txt-i">
+              <!-- INSTRUCCIÓN: Información de contacto, dirección y derechos de autor de tu empresa. -->
+              <p>Municipalidad de San Carlos<br> Dirección de Educacion <br>Todos los Derechos Reservados</p>
+          </div>
+        </div>
+
+      </footer>
+    </section>
+  </main>
+
+  <script src="code.js"></script>
+</body>
+</html>
