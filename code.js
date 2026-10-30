@@ -25,14 +25,14 @@ const info = {
     id: 1,
     lecturer: 'Andrea Yacuzzi',  
     position: 'Coach Integral',
-    review: 'A Peruvian archaeologist and researcher of one of the most important archaeological discoveries worldwide',
+    review: '...',
     image:  './images/Walter-alva.png'
   },
   {
     id: 3,
     lecturer: 'Monica Flores',  
     position: 'Hermana',
-    review: 'Professor of History, author of "La rebelión de Tupac Amaru", which was published in 2015',
+    review: '...',
     image:  './images/Charles-Walker.jpg'
   },{
     id: 3,
@@ -44,13 +44,13 @@ const info = {
     id: 4,
     lecturer: 'Mercedes Rodriguez',  
     position: 'Psicopedagoga',
-    review: 'An eminent archaeologist who researchs various aspects of the development of pre-Hispanic communities in the Central Andean',
+    review: '...',
     image:  './images/Krzysztof-Makowski.jpg'
   },{
     id: 5,
     lecturer: 'Cintia Arancibia',  
     position: 'Psicopedagoga',
-    review: 'An award peruvian anthropologist and archaeologist, who founded the Caral Archaeological Zone, the oldest civilization in America',
+    review: '...',
     image:  './images/Ruth-Shady.jpg'
   },{
     id: 6,
